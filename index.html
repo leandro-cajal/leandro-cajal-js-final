@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TOASTIFY CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Simulador de catálogo</title>
+</head>
+
+<body>
+    <h1>Simulador de catálogo</h1>
+
+    <form id="formulario">
+        <label for="opcion">Seleccione una opción:</label>
+        <select id="opcion" name="opcion">
+            <option value="mostrar">Mostrar productos</option>
+            <option value="buscar">Buscar producto</option>
+            <option value="agregar">Agregar producto</option>
+        </select>
+
+        <!-- Contenedor para mostrar u ocultar campos según la opción seleccionada -->
+        <div id="camposAgregar" style="display:none;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+            <br>
+
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock" required>
+            <br>
+
+            <!-- Nuevo campo adicional - Nombre del atributo -->
+            <div id="atributosContainer">
+                <!-- Este contenedor se llenará dinámicamente con los atributos -->
+            </div>
+
+            <!-- Botón para agregar más atributos -->
+            <button type="button" id="botonAgregarAtributo">Agregar Atributo</button>
+
+        </div>
+
+        <div id="camposBuscar" style="display:none;">
+            <label for="nombreBusqueda">Nombre del producto a buscar:</label>
+            <input type="text" id="nombreBusqueda" name="nombreBusqueda" required>
+            <br>
+        </div>
+
+        <button type="button" id="botonEjecutar">Ejecutar</button>
+    </form>
+
+    <!-- Contenedor para mostrar tarjetas de productos -->
+    <div id="tarjetasProductos"></div>
+
+    <!-- TOASTIFY JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- MAIN JS -->
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
+
+

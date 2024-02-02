@@ -1,0 +1,17 @@
+[
+    { 
+    "nombre": "smartphone",
+     "precio": 500000, 
+     "stock": 5 
+    },
+    { 
+    "nombre": "laptop", 
+    "precio": 800000, 
+    "stock": 3 
+    },
+    { 
+    "nombre": "smart TV", 
+    "precio": 450000, 
+    "stock": 6 
+    }
+]
